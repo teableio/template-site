@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+      <link rel="manifest" href="/favicon/manifest.json" />
       <body className={inter.className}>{children}</body>
     </html>
   );

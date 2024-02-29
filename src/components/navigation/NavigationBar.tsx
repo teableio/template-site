@@ -20,12 +20,12 @@ export default function Navbar() {
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="/">
-            <h1 className="text-sm flex items-center">
+            <h1 className="text-sm flex items-center font-semibold">
               <Image
                 className="inline-block mr-1"
                 src="/favicon/android-72x72.png"
-                width={28}
-                height={28}
+                width={32}
+                height={32}
                 alt="teable Logo"
               />
               teable
