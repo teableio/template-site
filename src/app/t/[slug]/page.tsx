@@ -30,7 +30,7 @@ export default async function Item(context: { params: { slug: string } }) {
             <a
               className=" block"
               href={
-                "https://app.teable.io/space?action=createFromTemplate&id=" +
+                "https://app.teable.io/space?action=createFromTemplate&tid=" +
                 template.baseId
               }
             >
