@@ -47,7 +47,7 @@ export default async function Item(context: { params: { slug: string } }) {
           </ul>
         </div>
         <div className="sm:col-span-5 col-span-8 sm:pl-12 sm:border-l sm:border-t-0 border-t pt-12 sm:pt-0 ">
-          <div className="relative sm:h-[400px] h-[250px] overflow-hidden rounded-md shadow-xl shadow-stone-400 mb-8">
+          <div className="relative sm:h-[400px] h-[250px] overflow-hidden rounded-md shadow-xl shadow-stone-300 mb-8">
             <Image
               className="relative object-cover dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
               src={template.shortCut?.[0].presignedUrl || "/default_image.png"}
