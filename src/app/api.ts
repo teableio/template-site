@@ -1,6 +1,8 @@
 import qs from "qs";
 export interface IAttach {
   id: string;
+  width?: number;
+  height?: number;
   name: string;
   path: string;
   presignedUrl: string;
