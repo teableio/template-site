@@ -5,6 +5,24 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 
+const useBodyScrollPosition = () => {
+  const [scrollTop, setScrollTop] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      const scrollTopValue =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      setScrollTop(scrollTopValue);
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return scrollTop;
+};
+
 export default function Navbar() {
   const [state, setState] = React.useState(false);
 
@@ -14,9 +32,14 @@ export default function Navbar() {
     { title: "Help", path: "https://help.teable.io" },
     { title: "Blog", path: "https://blog.teable.io" },
   ];
-
+  const scrollTop = useBodyScrollPosition();
   return (
-    <nav className="bg-white w-full border-b md:border-0">
+    <nav
+      className={
+        "bg-white w-full border-b md:border-0 top-0 sticky z-10 transition-shadow " +
+        (scrollTop > 0 ? "shadow" : "")
+      }
+    >
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="/">
