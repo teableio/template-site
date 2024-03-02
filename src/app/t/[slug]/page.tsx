@@ -3,7 +3,7 @@ import { getTemplate } from "./api";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "github-markdown-css";
+import "github-markdown-css/github-markdown-light.css";
 
 export default async function Item(context: { params: { slug: string } }) {
   const slug = context.params.slug;
