@@ -48,7 +48,7 @@ export default async function Item(context: { params: { slug: string } }) {
           </ul>
         </div>
         <div className="sm:col-span-5 col-span-8 sm:pl-12 sm:border-l sm:border-t-0 border-t pt-12 sm:pt-0 ">
-          <div className="relative sm:min-h-[400px] min-h-[250px] overflow-hidden rounded-md shadow-xl shadow-stone-300 sm:mb-14 mb-8">
+          <div className="relative overflow-hidden rounded-md shadow-xl shadow-stone-300 sm:mb-14 mb-8">
             <Image
               className="relative object-cover dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
               src={template.shortCut?.[0].presignedUrl || "/default_image.png"}
@@ -56,7 +56,7 @@ export default async function Item(context: { params: { slug: string } }) {
               quality={90}
               width={template.shortCut?.[0].width}
               height={template.shortCut?.[0].height}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 440px"
             />
           </div>
           <div className="markdown-body">

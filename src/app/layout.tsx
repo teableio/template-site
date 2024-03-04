@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
       <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
-      <link rel="manifest" href="/favicon/manifest.json" />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
       <body className={inter.className}>
         <Navbar />
         {children}

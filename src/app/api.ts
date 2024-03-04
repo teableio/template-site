@@ -29,7 +29,7 @@ export const fieldIdMap = {
   tags: "fldJT5IwA5AmhRFDjL0",
   shortCut: "fldAyyj9nmgt5WPdyEE",
   inSiteAddress: "fldXLcku2BHJ3paX4lN",
-  doc: "fldYehDZnQa2zOIwYTW",
+  doc: "fldF6wHXFqhXIYpzr4R",
 };
 
 export const transformRecord = (record: {
