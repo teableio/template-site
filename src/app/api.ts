@@ -21,15 +21,15 @@ export interface IRecordsType {
 }
 
 export const fieldIdMap = {
-  name: "fldXsIUBJWgg1aLhslv",
-  description: "fldUR5vWs1WebFfDS9I",
-  baseId: "fld4IOv1ajIyW4q6wTi",
-  cover: "fldLBDUwA8h17MSYywG",
-  recommend: "fldv7zmoX9cs3i8yUM6",
-  tags: "fldpWKiTgEHOuFsplCM",
-  shortCut: "fld57nMs1iodAU9A2sH",
-  inSiteAddress: "fldD6wqkvTgt9NT1ZNa",
-  doc: "fldqK4rp7Qv4Rstr55e",
+  name: "fldjLW98cEIM1HPs725",
+  description: "fldYehDZnQa2zOIwYTW",
+  baseId: "flduDv4n46lFjjTtg53",
+  cover: "fldGvaTfxIt7BANmhAE",
+  recommend: "fldt47H4rjXaB2RYADb",
+  tags: "fldJT5IwA5AmhRFDjL0",
+  shortCut: "fldAyyj9nmgt5WPdyEE",
+  inSiteAddress: "fldXLcku2BHJ3paX4lN",
+  doc: "fldYehDZnQa2zOIwYTW",
 };
 
 export const transformRecord = (record: {
@@ -72,6 +72,7 @@ export const getTemplateList = async () => {
   const result = await response.json();
 
   // console.log("url", url);
+  // console.log("result", result);
   // console.log(
   //   "result",
   //   result.records.map((r: { fields: any }) => r.fields),
