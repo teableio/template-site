@@ -56,7 +56,7 @@ export default async function Item(context: { params: { slug: string } }) {
               quality={90}
               width={template.shortCut?.[0].width}
               height={template.shortCut?.[0].height}
-              sizes="(max-width: 768px) 100vw, 440px"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <div className="markdown-body">
