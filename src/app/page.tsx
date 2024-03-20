@@ -1,4 +1,3 @@
-import Navbar from "@/components/navigation/NavigationBar";
 import Image from "next/image";
 import { getTemplateList } from "./api";
 import Link from "next/link";
