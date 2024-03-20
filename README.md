@@ -1,14 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-# Teable Template Site
-
-Welcome to the official repository of the Teable Template Site, a live demonstration and functional blueprint for building applications with Teable. This repository hosts the actual code running at [template.teable.io](https://template.teable.io), serving as a Template Center for Teable users.
-
 ## About This Project
-
-This project isn't just a showcase; it's a fully operational codebase that provides a Template Center service for Teable. It demonstrates how to leverage Teable's API to create a dynamic website with just basic knowledge of React and HTML.
+This project is the [template center](https://template.teable.io) that teable is currently running, and because it is so simple, it is suitable for a novice demo
 
 ### What This Project Contains
 
@@ -22,9 +15,6 @@ The site comprises two main pages:
 - **[Home Page](src/app/page.tsx)**: The central hub of the template site.
 - **[Detail Page](src/app/t/[slug]/page.tsx)**: Individual detail pages for each template.
 
-### Deployment
-This site is deployed on Vercel using their free tier service. It showcases how efficiently a Teable-based project can be deployed and scaled on a modern cloud platform.
-
 ## Getting Started
 
 To get started with this project:
@@ -36,11 +26,11 @@ To get started with this project:
 
 To run this project locally, you need to configure environment variables critical for connecting to Teable's API. Follow these steps to set up your environment:
 
-**AUTH_TOKEN**
+#### AUTH_TOKEN
 
 Create a personal access token at [Teable Personal Access Tokens](https://app.teable.cn/setting/personal-access-token). Ensure you grant the necessary permissions for the token to interact with your Teable data.
 
-**TABLE_ID** and **VIEW_ID**
+#### TABLE_ID and VIEW_ID
 
 visit [Template Management](https://template.teable.io/t/recS2CiVjWak6EQ7vG7) template, and use it in your space.
 
@@ -57,6 +47,32 @@ TABLE_ID=the-table-id
 VIEW_ID=the-view-id
 ```
 
+#### FIELD ID MAP
+Check out [src/app/api.ts](src/app/api.ts) you will see this map and you should replace it to your own
+Click on the gear ⚙️ in the top right corner of the table and you will see the id of all the fields
+```code
+/**
+ * A mapping of field names to their respective ID in Teable.
+ * This ensures robustness in the application as it allows access to record data
+ * via field IDs rather than names, which can change in the Teable UI without affecting the application.
+ * **if you want to use it, you might to change the fieldIdMap to your own fieldIdMap**
+ *
+ */
+export const fieldIdMap = {
+  name: "fldjLW98cEIM1HPs725",
+  description: "fldYehDZnQa2zOIwYTW",
+  baseId: "flduDv4n46lFjjTtg53",
+  cover: "fldGvaTfxIt7BANmhAE",
+  recommend: "fldt47H4rjXaB2RYADb",
+  tags: "fldJT5IwA5AmhRFDjL0",
+  shortCut: "fldAyyj9nmgt5WPdyEE",
+  inSiteAddress: "fldXLcku2BHJ3paX4lN",
+  doc: "fldF6wHXFqhXIYpzr4R",
+};
+
+```
+
+### Running the Project
 Start the development server with `pnpm start`.
 
 ## Deploy on Vercel
